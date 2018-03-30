@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4caf50",
+    "backgroundColor": "white",
+    "navigationBarTitleText": "supertask",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "#4caf50",
+    "color": "#8a8a8a",
+    "selectedColor": "#4caf50",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "任务",
+        "iconPath": "static/images/list.png",
+        "selectedIconPath": "static/images/list-selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "static/images/main.png",
+        "selectedIconPath": "static/images/main-selected.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

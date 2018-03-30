@@ -1,0 +1,96 @@
+<view class="index">
+	<view class="form">
+		<view class="title">
+			<input class="input-title" 
+						 type="text" 
+						 id="text"
+						 value="{{title}}"
+						 focus="{{tfocus}}"
+						 bindchange="changeTitle"
+             bindconfirm="add"
+						 placeholder="您需要做什么？" />
+		</view>
+		<!--<view class="title">
+			<input class="input-desc" 
+						 name="desc" 
+						 type="text"
+						 id="desc"
+						 value="{{desc}}" 
+						 focus="{{dfocus}}"
+						 bindchange="changeDesc"
+						 placeholder="简单描述(可选)" />
+		</view>-->
+		<!--<view bindtap="add" class="btn-submit">+</view>-->
+	</view>
+
+	<view class="todolist">
+		<block wx:for="{{ arr }}" wx:key="{{index}}">
+			<view class="todoitem" 
+						bindtap="finished" 
+						bindtouchstart="start" 
+						bindtouchmove="move"
+						data-item="{{item}}"
+						data-index="{{index}}">
+				<view class="col col1">
+					<view class="num">{{index+1}}</view>
+					<image mode="aspectFit" src="/static/images/check.png"></image>
+				</view>
+				<view class="col col2">
+					<view class="col-title">{{ item.title }}</view>
+					<view class="col-desc">{{ item.desc }}</view>
+				</view>
+				
+				<view class="col col5"
+							data-color="{{item.color}}"
+							data-index="{{index}}" 
+							catchtap="changeColor">
+					<view class="circle" 
+								style="background-color: {{item.color}}"></view>
+				</view>
+
+				<view class="{{item.editState ? 'editor show' : 'editor hide'}}">
+					<view class="edit">
+						<image catchtap="edit"
+									 data-item="{{item}}"
+									 data-index="{{index}}" 
+									 mode="aspectFit" 
+									 src="/static/images/edit.png"></image>
+					</view>
+					<view class="del">
+						<image data-item="{{item}}"
+									 data-index="{{index}}" 
+									 catchtap="remove" 
+									 mode="aspectFit" 
+									 src="/static/images/del.png"></image>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+	<view wx:if="{{ arr.length >= 1 && finished.length >= 1 }}" class="line"></view>
+	
+	<view class="finished">
+		<block wx:for="{{finished}}" wx:key="{{index}}">
+			<view class="todoitem"
+						bindtap="restore"
+						data-item="{{item}}"
+						data-index="{{index}}">
+				<view class="col col1">
+					<image mode="aspectFit" src="/static/images/checked.png"></image>
+				</view>
+				<view class="col col2">
+					<view class="col-title">{{item.title}}</view>
+					<view class="col-desc">{{item.desc}}</view>
+				</view>
+				<view class="col col5">
+					<view class="circle" style="background-color: {{item.color}}"></view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+	<view bindtap="sync" class="sync">
+		<!--<image mode="aspectFit" src="/static/images/sync.png"></image>-->
+	</view>
+</view>

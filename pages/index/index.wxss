@@ -1,0 +1,194 @@
+.index {
+  width: 100%;
+  margin-bottom: 100rpx;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+.index .form{
+  width: 92%;
+  margin: 0 auto;
+}
+.index .title,
+.index .desc {
+  width: 100%;
+  height: 90rpx;
+  margin-top: 20rpx;
+}
+.index .input-title,
+.index .input-desc {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 1rpx solid #ddd;
+  border-radius: 4rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #444;
+  line-height: 1.4;
+}
+.index .input-title.focus {
+  border-color: #4caf50;
+}
+
+.index .btn-submit {
+  width: 100%;
+  height: 90rpx;
+  margin: 20rpx 0;
+  text-align: center;
+  line-height: 90rpx;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 60rpx;
+  font-weight: 700;
+  border-radius: 4rpx;
+}
+
+.index .finished {
+  width: 92%;
+  margin: 60rpx auto;
+}
+.index .finished .todoitem {
+  opacity: 0.5;
+}
+.finished .todoitem .col-title,
+.finished .todoitem .col-desc {
+  text-decoration: line-through;
+}
+.index .todolist {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 0;
+  padding-top: 30rpx;
+}
+.index .line {
+  width: 100%;
+  height: 1rpx;
+  background-color: #4caf50;
+}
+.index .todoitem {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80rpx;
+  display: inline-block;
+  border: 4rpx solid transparent;
+  padding: 10rpx 10rpx 14rpx;
+  margin:  6rpx 0;
+  border-bottom: 1rpx solid #dfdfdf;
+  position: relative;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  right: 0;
+}
+.hide {
+  visibility: hidden;
+  right: -140rpx;
+  opacity: 0;
+}
+.todoitem .editor {
+  position: absolute;
+  top: 10rpx;
+  height: 70rpx;
+  width: 140rpx;
+  z-index: 5;
+  background-color: #ffffff;
+  transition: visibility 1s;
+  transition-timing-function: linear;
+}
+.edit,
+.del {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.edit image,
+.del image {
+  width: 36rpx;
+  height: 36rpx;
+  padding: 17rpx;
+}
+
+.index .todoitem:last-child {
+  border-bottom: none;
+}
+.todoitem .col {
+  min-height: 80rpx;
+  float: left;
+}
+.col1, 
+.col5 {
+  width: 8%;
+}
+.col3 image,
+.col4 image {
+  width: 34rpx;
+  height: 34rpx;
+  float: right;
+  padding-top: 15.5rpx;
+}
+.col2 {
+  width: 84%;
+  display: inline-block;
+}
+.col2 .col-title {
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.4;
+  padding-top: 10rpx;
+  padding-bottom: 8rpx;
+}
+.col2 .col-desc {
+  font-size: 24rpx;
+  color: #aaa;
+  padding-bottom: 8rpx;
+  line-height: 1.4;
+}
+.col5 .circle {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  float: right;
+  margin-top: 12rpx;
+  background-color: #f44336;
+}
+.col1 {
+  position: relative;
+}
+.col1 .num {
+  position: absolute;
+  width: 42rpx;
+  height: 42rpx;
+  top: 12rpx;
+  left: 0;
+  text-align: center;
+  line-height: 42rpx;
+  z-index: 2;
+  font-size: 28rpx;
+  color: #808080;
+}
+.col1 image {
+  position: absolute;
+  display: block;
+  top: 12rpx;
+  left: 0;
+  width: 42rpx;
+  height: 42rpx;
+  z-index: 1;
+}
+
+.sync {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50rpx;
+  right: 4%;
+  overflow: hidden;
+}
+.sync image {
+  width: 100%;
+  height: 100%;
+}

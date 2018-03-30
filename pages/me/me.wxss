@@ -1,0 +1,73 @@
+.me {
+  width: 100%;
+}
+.me .header {
+  width: 400rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  /*border-bottom: 1rpx solid #ddd;*/
+}
+.header .avator {
+  width: 200rpx;
+  height: 200rpx;
+  padding: 20rpx 100rpx 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avator image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.header .nickname {
+  width: 100%;
+  text-align: center;
+  color: #474844;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+}
+.tb {
+  width: 100%;
+  margin-top: 20rpx;
+}
+.tb .line {
+  width: 85%;
+  margin: 0 auto;
+  height: 110rpx;
+  display: table;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #ddd;
+}
+.line .icon,
+.line .txt,
+.line .arrow {
+  height: 90rpx;
+  display: table-cell;
+  vertical-align: middle;
+}
+.line .icon,
+.line .arrow {
+  width: 15%;
+}
+.icon image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.line .txt {
+  width: 70%;
+  font-size: 30rpx;
+  color: #666666;
+}
+.text {
+  text-align: center;
+  color: #ff4567;
+}
+.line .arrow image {
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  float: right;
+  padding-top: 31rpx 0;  
+}

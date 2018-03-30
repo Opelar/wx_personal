@@ -1,0 +1,29 @@
+<view class="me">
+  <view class="header">
+    <view class="avator">
+      <image mode="aspectFit" src="{{ userInfo.avatarUrl }}"></image>
+    </view>
+    <view class="nickname">hello {{ userInfo.nickName }}</view>
+    <view class="text"></view>
+  </view>
+  <view class="tb">
+    <view class="line">
+      <view class="icon">
+        <image mode="aspectFit" src="/static/images/no.png"></image>
+      </view>
+      <view class="txt">未完成</view>
+      <view class="arrow">
+        <image mode="aspectFit" src="/static/images/arrow.png"></image>
+      </view>
+    </view>
+    <view class="line">
+      <view class="icon">
+        <image mode="aspectFit" src="/static/images/yes.png"></image>
+      </view>
+      <view class="txt">已完成</view>
+      <view class="arrow">
+        <image mode="aspectFit" src="/static/images/arrow.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
